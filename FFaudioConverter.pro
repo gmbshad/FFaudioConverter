@@ -87,7 +87,7 @@ exists("/.flatpak-info") {
 DEFINES += DEFAULT_FFMPEG_BINARY=\\\"$${DEFAULT_FFMPEG_BINARY}\\\"
 
 # Set .exe icon on Windows
-win32:RC_ICONS += com.github.Bleuzen.FFaudioConverter.ico
+win32:RC_ICONS += com.github.REDDev.FFaudioConverter.ico
 
 # Deployment
 unix {
@@ -100,13 +100,13 @@ unix {
 
     target.path = $$BINDIR
 
-    icon.files = com.github.Bleuzen.FFaudioConverter.png
+    icon.files = com.githubREDDev.FFaudioConverter.png
     icon.path = $$DATADIR/icons/hicolor/512x512/apps/
 
-    desktop.files = com.github.Bleuzen.FFaudioConverter.desktop
+    desktop.files = com.githubREDDev.FFaudioConverter.desktop
     desktop.path = $$DATADIR/applications/
 
-    appdata.files = com.github.Bleuzen.FFaudioConverter.appdata.xml
+    appdata.files = com.githubREDDev.FFaudioConverter.appdata.xml
     appdata.path = $$DATADIR/metainfo/
 
     INSTALLS += target icon desktop appdata

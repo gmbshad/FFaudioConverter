@@ -1,2 +1,2 @@
 #!/bin/sh
-lupdate -no-obsolete FFaudioConverter.pro
+lupdate -no-obsolete ./FFaudioConverter.pro
