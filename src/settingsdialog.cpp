@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  Bleuzen
-https://github.com/Bleuzen/FFaudioConverter
-supgesu@gmail.com
+Copyright (C) 2018-2024  REDDev
+https://github.com/gmbshad/FFaudioConverter
+gmbgetmoney@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -52,13 +52,19 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     ui->comboBox_OutputChannelCount->addItem(tr("Keep"), 0);
     ui->comboBox_OutputChannelCount->addItem(tr("1 (Mono)"), 1);
     ui->comboBox_OutputChannelCount->addItem(tr("2 (Stereo)"), 2);
-
+    ui->comboBox_OutputChannelCount->addItem(tr("5.1 (DolbyProLogic"), 6);
+    ui->comboBox_OutputChannelCount->addItem(tr("7.1 (DolbySurround"), 8);
+    ui->comboBox_OutputChannelCount->addItem(tr("5.1.4 (DolbyAtmos)"), 10);
+    ui->comboBox_OutputChannelCount->addItem(tr("7.1.4 (DolbySpatial3D"), 12);
+    
     ui->comboBox_AudioFiltersPresets->addItem(tr("Disabled"), "");
-    ui->comboBox_AudioFiltersPresets->addItem(tr("Increase volume"), "volume=10dB");
-    ui->comboBox_AudioFiltersPresets->addItem(tr("Reduce volume"), "volume=-5dB");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Increase volume"), "volume=6dB");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Reduce volume"), "volume=-6dB");
     ui->comboBox_AudioFiltersPresets->addItem(tr("Fade-in and fade-out"), "afade=duration=5\nareverse\nafade=duration=5\nareverse");
-    ui->comboBox_AudioFiltersPresets->addItem(tr("Bass boost"), "volume=-10dB\nbass=gain=10");
-    ui->comboBox_AudioFiltersPresets->addItem(tr("Speed up"), "atempo=1.5");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Spatial/Surround ADM BWF Panner + REDDeffects"), "pan=7.1+TFL+TFR+TBL+TBR|FL=c0|FR=c1|FC=c2|LFE=c3|SL=c6|SR=c7|BL=c4|BR=c5|TFL=c8|TFR=c9|TBL=c10|TBR=c11\ndynaudnorm\nsurround\nsuperequalizer\ndeesser\naresample=matrix_encoding=dolby\naemphasis=type=cd\nacompressor\ncrystalizer");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Apply REDDeffects"), "extrastereo\nsuperequalizer\naresample=matrix_encoding=dplii\naemphasis=type=cd\nacompressor\ncrystalizer");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Bass boost"), "aemphasis=type=riaa\nsuperequalizer\ndynaudnorm\nloudnorm");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Speed up"), "atempo=.6");
     ui->comboBox_AudioFiltersPresets->setCurrentIndex(-1);
 
     // Set settings in GUI

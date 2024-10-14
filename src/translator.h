@@ -1,7 +1,7 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  Bleuzen
-https://github.com/Bleuzen/FFaudioConverter
+Copyright (C) 2018-2024  REDDev
+https://github.com/gmbshad/FFaudioConverter
 supgesu@gmail.com
 
 This program is free software: you can redistribute it and/or modify

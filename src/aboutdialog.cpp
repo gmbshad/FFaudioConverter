@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  Bleuzen
-https://github.com/Bleuzen/FFaudioConverter
-supgesu@gmail.com
+Copyright (C) 2018-2024  REDDev
+https://github.com/gmbshad/FFaudioConverter
+gmbgetmoney@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
 
     ui->label_Appname->setText(QCoreApplication::applicationName());
     ui->label_Version->setText("v" + QCoreApplication::applicationVersion());
-    ui->label_Developer->setText(tr("developed by") + " " + QCoreApplication::organizationName());
+    ui->label_Developer->setText(tr("developed by") + " Mista Swisha aka Shad aka Shid E REDD (" + QCoreApplication::organizationName() + ")");
 }
 
 AboutDialog::~AboutDialog()

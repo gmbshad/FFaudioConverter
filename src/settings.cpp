@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  Bleuzen
-https://github.com/Bleuzen/FFaudioConverter
-supgesu@gmail.com
+Copyright (C) 2018-2024  REDDev
+https://github.com/gmbshad/FFaudioConverter
+gmbgetmoney@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -35,15 +35,15 @@ int Settings::Threads;
 void Settings::init() {
     QSettings settings;
 
-    Settings::FFmpegBinary = settings.value("FFmpegBinary", DEFAULT_FFMPEG_BINARY).toString();
-    Settings::OutputFormat = settings.value("OutputFormat", "mp3").toString();
-    Settings::OutputQualityArguments = settings.value("OutputQualityArguments", "-q:a 2").toString();
-    Settings::OutputDirectory = settings.value("OutputDirectory", QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/" + QCoreApplication::applicationName() + "/{sourcedir}").toString();
+    Settings::FFmpegBinary = settings.value("FFmpegBinary", "/usr/bin/ffmpeg").toString();
+    Settings::OutputFormat = settings.value("OutputFormat", "wav").toString();
+    Settings::OutputQualityArguments = settings.value("OutputQualityArguments", "-q:a 0 -map_metadata 0").toString();
+    Settings::OutputDirectory = settings.value("OutputDirectory", "QStandardPaths::writableLocation(QStandardPaths::HomeLocation").toString();
     Settings::OutputSamplerate = settings.value("OutputSamplerate", "").toString();
     Settings::OutputChannelCount = settings.value("OutputChannelCount", 0).toInt();
-    Settings::AudioFilters = settings.value("AudioFilters", "").toString();
+    Settings::AudioFilters = settings.value("AudioFilters", "#REMEMBER to Apply REDDeffects for ADM/BWF WAV files if converstion fails!").toString();
     Settings::QuickConvertMode = settings.value("QuickConvertMode", false).toBool();
-    Settings::CopyNonAudioFiles = settings.value("CopyNonAudioFiles", false).toBool();
+    Settings::CopyNonAudioFiles = settings.value("CopyNonAudioFiles", true).toBool();
     Settings::UseSoXresampler = settings.value("UseSoXresampler", false).toBool();
     Settings::Threads = settings.value("Threads", 0).toInt();
 

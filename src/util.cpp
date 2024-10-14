@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  Bleuzen
-https://github.com/Bleuzen/FFaudioConverter
-supgesu@gmail.com
+Copyright (C) 2018-2024  REDDev
+https://github.com/gmbshad/FFaudioConverter
+gmbgetmoney@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -100,7 +100,7 @@ bool Util::mayBeAudioOrVideoFile(QString file) {
         return output.contains("flac");
 
     } else if(Settings::OutputFormat == "wav") {
-        return output.contains("pcm_s16le");
+        return output.contains("pcm_s24le");
 
     } else {
         return false;

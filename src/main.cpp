@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  Bleuzen
-https://github.com/Bleuzen/FFaudioConverter
-supgesu@gmail.com
+Copyright (C) 2018-2024  REDDev
+https://github.com/gmbshad/FFaudioConverter
+gmbgetmoney@gmail.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -26,12 +26,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
+    QApplication a(argc, argv);
 
-    QCoreApplication::setOrganizationName("Bleuzen");
+    QCoreApplication::setOrganizationName("REDDev");
     QCoreApplication::setApplicationName("FFaudioConverter");
-    QCoreApplication::setApplicationVersion(VERSIONSTR);
-    QGuiApplication::setDesktopFileName("com.github.Bleuzen.FFaudioConverter");
+    QCoreApplication::setApplicationVersion(QT_VERSION_STR);
+    QGuiApplication::setDesktopFileName("com.github.REDDev.FFaudioConverter");
 
     QCommandLineParser commandLine;
     commandLine.addHelpOption();
@@ -39,11 +39,15 @@ int main(int argc, char *argv[])
     commandLine.addPositionalArgument("path", "Open with files or directories added");
     QCommandLineOption noTranslationsOption("no-translations", "Do not load translations");
     commandLine.addOption(noTranslationsOption);
-    commandLine.process(app);
+    commandLine.process(a);
 
     qDebug().noquote() << "Starting" << QCoreApplication::applicationName() + " v" + QCoreApplication::applicationVersion();
 
-    app.setWindowIcon(QIcon(":/com.github.Bleuzen.FFaudioConverter.ico"));
+      a.setWindowIcon(QIcon(":/com.github.REDDev.FFaudioConverter.ico"));
+
+#ifdef Q_OS_WIN
+    a.setStyle(QStyleFactory::create("Fusion"));  // Use Fusion style on Windows because it looks better
+#endif
 
     // Register ENUMs
     qRegisterMetaType<FFmpegTask::ConvertStatus>("FFmpegTask::ConvertStatus");
@@ -62,5 +66,5 @@ int main(int argc, char *argv[])
         w.processCommandLine(commandLine.positionalArguments());
     }
 
-    return app.exec();
+    return a.exec();
 }
