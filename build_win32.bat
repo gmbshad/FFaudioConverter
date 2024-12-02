@@ -1,10 +1,10 @@
-SET PATH=%PATH%;C:\Qt\Qt5.12.11\5.12.11\mingw73_64\bin;C:\Qt\Qt5.12.11\Tools\mingw730_64\bin
+SET PATH=C:\Qt\bin;%MSYS_PATH%;%MINGW64_PATH%;%PATH%
 
 mkdir build
 cd build
 
 qmake.exe ..\FFaudioConverter.pro -spec win32-g++ CONFIG+=release
-mingw32-make.exe -j4
+make.exe -j4
 
 cd release
 
