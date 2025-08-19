@@ -8,6 +8,7 @@ Features:
  - Audio filters possible (bass boost your music or do fade-ins/outs…)
  - Change of samplerate possible
  - High quality resampling with SoX possible
+ - Dolby Atmos Surround & Binaural Panning (Stereo) rematrix options 
  - Quick mode for copying files in same format and skip already converted files
 
 Currently supported output formats are:
@@ -29,4 +30,5 @@ AUR: https://aur.archlinux.org/packages/ffaudioconverter/
 You can find the latest version for Windows here: (https://github.com/gmbshad/FFaudioConverter/releases/download/v0.33.0/FFaudioConverter_Windows.zip)
 
 Just extract the zip file and run the .exe file in it.
+
 
