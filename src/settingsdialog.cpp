@@ -61,8 +61,8 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     ui->comboBox_AudioFiltersPresets->addItem(tr("Increase volume"), "volume=6dB");
     ui->comboBox_AudioFiltersPresets->addItem(tr("Reduce volume"), "volume=-6dB");
     ui->comboBox_AudioFiltersPresets->addItem(tr("Fade-in and fade-out"), "afade=duration=5\nareverse\nafade=duration=5\nareverse");
-    ui->comboBox_AudioFiltersPresets->addItem(tr("Spatial/Surround + REDDeffects"), "aemphasis=mode=reproduction\ndeesser\nsuperequalizer\nacompressor\ncrystalizer\naresample=matrix_encoding=dplii");
-    ui->comboBox_AudioFiltersPresets->addItem(tr("REDDeffects"), "aemphasis=mode=production\nextrastereo\nsuperequalizer\naexciter\nacompressor\naresample=matrix_encoding=dolby");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("Spatial/Surround + REDDeffects"), "aemphasis=mode=reproduction\ndeesser\npan=stereo|FL=FLC+0.3*BL+0.3*SL+0.3*BC+0.3*FC+0.45*FR|FR=FRC+0.3*BR+0.3*SR+0.3*BC+0.3*FC+0.45*FL\nextrastereo\nacompressor\ncrystalizer\naresample=matrix_encoding=dolby\nsuperequalizer");
+    ui->comboBox_AudioFiltersPresets->addItem(tr("REDDeffects"), "aemphasis=mode=production\nextrastereo\nsuperequalizer\naexciter\nacompressor\naresample=matrix_encoding=dplii");
     ui->comboBox_AudioFiltersPresets->addItem(tr("Bass boost"), "aemphasis=type=riaa\nsuperequalizer\ndynaudnorm\nloudnorm");
     ui->comboBox_AudioFiltersPresets->addItem(tr("Speed up"), "atempo=.6");
     ui->comboBox_AudioFiltersPresets->setCurrentIndex(-1);
