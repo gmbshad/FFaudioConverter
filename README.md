@@ -21,11 +21,16 @@ Currently supported output formats are:
 ### Installation
 
 #### Linux
-Flatpak: `flatpak install flathub com.github.Bleuzen.FFaudioConverter`
+Flatpak: `flatpak install flathub com.github.REDDDev.FFaudioConverter`
 
 AUR: https://aur.archlinux.org/packages/ffaudioconverter/
 
+Tarball: https://github.com/gmbshad/FFaudioConverter/releases/download/v0.33.0/FFAudioConverterLinux.tar
+
 #### Windows
-You can find the latest version for Windows here: https://github.com/Bleuzen/FFaudioConverter/releases/download/v0.31.0/FFaudioConverter-0.31.0-win64.zip
+You can find the latest version for Windows here: https://github.com/gmbshad/FFaudioConverter/releases/download/v0.33.0/FFaudioConverter_Windows.zip
+
+#### macOS
+You can find the latest version for macOS here: https://github.com/gmbshad/FFaudioConverter/releases/download/v0.33.0/FFaudioConverter_MacApp.zip
 
 Just extract the zip file and run the .exe file in it.
