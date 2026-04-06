@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------
 FFaudioConverter
-Copyright (C) 2018-2024  REDDev
+Copyright (C) 2018-2026  REDDDev
 https://github.com/gmbshad/FFaudioConverter
-gmbgetmoney@gmail.com
+reputed.02.snapper@icloud.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -5,7 +5,7 @@ VERSION=${VERSION/\");}
 VERSION=$(echo $VERSION | tr -d '\n')
 
 # Set version in appdata.xml
-sed -i "/    <release date=/c\    <release date=\"$(date +%Y-%m-%d)\" version=\"$VERSION\"/>" com.github.REDDev.FFaudioConverter.appdata.xml
+sed -i "/    <release date=/c\    <release date=\"$(date +%Y-%m-%d)\" version=\"$VERSION\"/>" com.github.REDDDev.FFaudioConverter.appdata.xml
 
 # Package
 mkdir -p release
@@ -16,10 +16,10 @@ tar -cJf release/FFaudioConverter-$VERSION-src.tar.xz \
     build_linux.sh \
     build_win32.bat \
     LICENSE \
-    com.github.REDDev.FFaudioConverter.appdata.xml \
-    com.github.REDDev.FFaudioConverter.desktop \
-    com.github.REDDev.FFaudioConverter.png \
-    com.github.REDDev.FFaudioConverter.ico \
+    com.github.REDDDev.FFaudioConverter.appdata.xml \
+    com.github.REDDDev.FFaudioConverter.desktop \
+    com.github.REDDDev.FFaudioConverter.png \
+    com.github.REDDDev.FFaudioConverter.ico \
     ffaudioconverter.qrc
 
 cd release/
