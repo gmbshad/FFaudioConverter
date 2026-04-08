@@ -1,0 +1,8 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\debug",
+      "out\\build\\release"
+    ]
+  }
+}

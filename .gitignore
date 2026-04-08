@@ -51,3 +51,6 @@ release
 
 # My todo list
 todo.txt
+/.vs
+/CMakePresets.json
+/CMakeUserPresets.json
