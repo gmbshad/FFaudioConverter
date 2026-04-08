@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
-project(.. LANGUAGES CXX)
+project(ffAudioConverter LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets)
 qt_standard_project_setup(REQUIRES 6.8)
 
-qt_add_executable(..
+qt_add_executable(ffAudioConverter
     src/aboutdialog.cpp
     src/aboutdialog.h
     src/dirscan.cpp
@@ -24,20 +24,20 @@ qt_add_executable(..
     src/util.h
 )
 
-target_sources(..
+target_sources(ffAudioConverter
     PRIVATE
         src/aboutdialog.ui
         src/mainwindow.ui
         src/settingsdialog.ui
 )
 
-qt_add_resources(.._resources ffaudioconverter.qrc)
-target_sources(..
+qt_add_resources(ffAudioConverter_resources ffaudioconverter.qrc)
+target_sources(ffAudioConverter
     PRIVATE
-        ${.._resources}
+        ${ffAudioConverter_resources}
 )
 
-target_link_libraries(..
+target_link_libraries(ffAudioConverter
     PRIVATE
         Qt::Core
         Qt::Gui
